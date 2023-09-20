@@ -1,6 +1,6 @@
 price = round(float(input("Price: ")))
 payment = int(input("Payment: "))
-change = payment-price 
+change = payment-price
 
 tusenlapp,femhlapp,tvahlapp,hlapp,femtiolapp,tjugolapp,tiokr,femkr,tvakr,enkr = 0,0,0,0,0,0,0,0,0,0
 

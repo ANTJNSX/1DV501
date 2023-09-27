@@ -1,4 +1,3 @@
-
 import os
 
 inp = ""
@@ -21,6 +20,7 @@ def list_files(dir_path):
 
 def change_dir():
     new_dir = input("Name of directory to enter: ")
+    global base_path
     base_path = base_path + r"\\" + new_dir
 
 

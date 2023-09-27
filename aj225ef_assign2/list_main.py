@@ -1,8 +1,13 @@
-from list_functions import random_list, average, only_odd, to_str, has_duplicates
+from list_functions import (random_list,
+                            average,
+                            only_odd,
+                            to_str,
+                            has_duplicates)
 
-test_list = [1,2,3,4,5,6,7,8,9,10,1]
 
-print("This is the test list:",test_list, end="\n")
+test_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1]
+
+print("This is the test list:", test_list, end="\n")
 
 print("\nhere is a list of 7 numbers from 1-100:", *random_list(7))
 

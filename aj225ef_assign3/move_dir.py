@@ -2,7 +2,7 @@ import os
 
 inp = ""
 new_dir = r''
-base_path = r'C:\Users\antom\Documents\UNI\1DV501'
+base_path = os.getcwd()
 dir_list = []
 file_list = []
 break_program = False

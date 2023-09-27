@@ -26,3 +26,4 @@ def count_files(dir_path):  # Returns the number of files
 print(f"Below me I have {count_directories(dir_path)} directories/folders")
 
 print(f"This directory contains {count_files(dir_path)} files")
+

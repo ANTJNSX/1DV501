@@ -41,7 +41,7 @@ def quit():
 
 while break_program is not True:
 
-    print("1. List directories \n2. Change directory \n3. List files \n4. Quit")
+    print("1. List directories\n2. Change directory\n3. List files\n4. Quit")
 
     inp = int(input("\n==> "))
 

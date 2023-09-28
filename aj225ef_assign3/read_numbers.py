@@ -1,4 +1,5 @@
 import os
+import math
 
 ten_k_a = r'/home/ant/UNI/1DV501/aj225ef_assign3/file_10k_integers_A.txt'
 ten_k_b = r'/home/ant/UNI/1DV501/aj225ef_assign3/file_10k_integers_B.txt'
@@ -15,20 +16,25 @@ with open(ten_k_a, "r") as file:
 lst_b = []
 with open(ten_k_b, "r") as file:
     for line in file:
-        for i in line.split(","):
+        for i in line.split(":"):
             lst_b.append(int(i))
 
-variant_lst = []
 
 def mean(lst):
     return round((sum(lst) / 10_000), 1)
 
 
 def std(lst):
+    variant_lst = []
     # fix list and add variants to list, then return variant mean 
+    for i in lst:
+        variant_lst.append((mean(lst)-i)**2)
 
-    return 0
+    return round(math.sqrt((sum(variant_lst) / 10_000)), 1)
 
 
-print(mean(lst_a))
+print("Results for file A:")
+print(f'mean = {mean(lst_a)}, standard deviation = {std(lst_a)}')
 
+print("\nResults for file B:")
+print(f'mean = {mean(lst_b)}, standard deviation = {std(lst_b)}')

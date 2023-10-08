@@ -14,4 +14,3 @@ def pretty_print_sub(dir_path, depth):
 
 
 pretty_print_sub(dir_path, depth)
-

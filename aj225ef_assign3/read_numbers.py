@@ -1,12 +1,12 @@
 import os
 import math
 
-ten_k_a = r'/home/ant/UNI/1DV501/aj225ef_assign3/file_10k_integers_A.txt'
-ten_k_b = r'/home/ant/UNI/1DV501/aj225ef_assign3/file_10k_integers_B.txt'
+ten_k_a = os.getcwd() + r'\file_10k_integers_A.txt'
+ten_k_b = os.getcwd() + r'\file_10k_integers_B.txt'
 
 # Create list with the integers from splitting each line and converting to int
 lst_a = []
-with open(ten_k_a, "r") as file:
+with open(ten_k_a, "r", encoding="utf-8") as file:
     for line in file:
         for i in line.split(","):
             lst_a.append(int(i))
@@ -14,7 +14,7 @@ with open(ten_k_a, "r") as file:
 
 # Create list with the integers from splitting each line and converting to int
 lst_b = []
-with open(ten_k_b, "r") as file:
+with open(ten_k_b, "r", encoding="utf-8") as file:
     for line in file:
         for i in line.split(":"):
             lst_b.append(int(i))
@@ -26,7 +26,7 @@ def mean(lst):
 
 def std(lst):
     variant_lst = []
-    # fix list and add variants to list, then return variant mean 
+    # fix list and add variants to list, then return variant mean
     for i in lst:
         variant_lst.append((mean(lst)-i)**2)
 

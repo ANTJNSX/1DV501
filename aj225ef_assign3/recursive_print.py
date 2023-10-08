@@ -11,4 +11,3 @@ def print_sub(dir_path):
 
 
 print_sub(dir_path)
-

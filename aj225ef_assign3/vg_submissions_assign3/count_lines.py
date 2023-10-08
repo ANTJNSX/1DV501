@@ -11,10 +11,10 @@ dir_path = os.getcwd()
 total_lines = 0
 count = 0
 
+
 def count_py_lines(dir_path):
     global total_lines
     global count
-    line_count = 0
 
     # Start working through the directories
     for path in os.listdir(dir_path):
@@ -24,15 +24,17 @@ def count_py_lines(dir_path):
         # check for files that end with .py
         if path.endswith('.py'):
             # Get the line count
-            with open(os.path.join(dir_path, path), "r") as file:
-                li = file.readlines()
-            count += 1
-            total_lines += len(li)
+            try:
+                with open(os.path.join(dir_path, path), "r") as file:
+                    li = file.readlines()
 
+                count += 1
+                total_lines += len(li)
+            except:
+                print("Error with opening", file.name)
 
     return total_lines
 
 
-print("Number of lines:", count_py_lines(dir_path))
+print("\nNumber of lines:", count_py_lines(dir_path))
 print("Across:", count, "Files")
-
